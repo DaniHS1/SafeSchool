@@ -11,11 +11,11 @@ body{
 	color: #333;
 	/*overflow: hidden; /*No apareceran las barras*/
   overflow-x: hidden;
-  background-color: #222224;
 }
 
 .segundo{
   display: flex;
+  background-color: #222224;
 }
 
 .queEs{
