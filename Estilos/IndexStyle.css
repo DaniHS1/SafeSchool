@@ -72,6 +72,7 @@ body{
   justify-content: space-between;
   margin: auto;
   min-width: 150px;
+  margin-bottom: 10px;
 }
 
 .sub{
@@ -92,7 +93,7 @@ body{
 }
 
 @media(max-width: 500px){
-  .critica{
+  .critica, .personal{
     width: 90%;
   }
 }
@@ -104,4 +105,43 @@ body{
 .cuarto, .quinto{
   background-color: #EB7F00;
   color: #F9F9F9;
+}
+
+.cuarto{
+  padding: 1%;
+}
+
+.personal{
+  width: 30%;
+  background-color: #F9F9F9;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  justify-content: space-between;
+  margin: auto;
+  min-width: 150px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.personal img{
+  width: 50%;
+  border-radius: 50%;
+}
+
+.descripciones{
+  border-color: black;
+  border: red 5px solid;
+}
+.descripciones p{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: ;
+}
+
+.personal img:hover ~ p{
+  color: white;
+  display: block;
 }
