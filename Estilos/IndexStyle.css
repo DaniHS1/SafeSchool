@@ -56,6 +56,8 @@ body{
 
 .tercero{
 	background-color: #1695A3;
+	padding-top: 2%;
+	padding-bottom: 2%;
 }
 
 .criticas{
@@ -145,4 +147,8 @@ body{
 
 .descripciones{
   border-color: black;
+}
+
+.quito{
+	padding: 2%;
 }
