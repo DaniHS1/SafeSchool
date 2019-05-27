@@ -125,23 +125,6 @@ body{
   color: black;
 }
 
-.personal img{
-  width: 50%;
-  border-radius: 50%;
-}
-
 .descripciones{
   border-color: black;
-  border: red 5px solid;
-}
-.descripciones p{
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: ;
-}
-
-.personal img:hover ~ p{
-  color: white;
-  display: block;
 }
