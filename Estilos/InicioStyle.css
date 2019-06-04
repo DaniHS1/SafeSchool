@@ -1,0 +1,25 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #FBFCFC;
+}
+
+.datos{
+  margin-left: 10%;
+  display: flex;
+}
+.datos nav{
+  width: 40%;
+  background-color: #2874A6;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.datos form input, .datos form button{
+  display: block;
+}
