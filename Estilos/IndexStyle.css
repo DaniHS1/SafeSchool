@@ -149,6 +149,11 @@ body{
   border-color: black;
 }
 
-.quito{
+.quinto{
 	padding: 2%;
+	background: url("../Images/Fondo1.jpg") fixed;
+}
+
+.quinto .content-quinto{
+	margin: auto;
 }
