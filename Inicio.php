@@ -1,3 +1,15 @@
+<?php
+
+	session_start();
+
+	if (@!$_SESSION['idUsuario']) {
+
+		header("location:index.html");
+
+	}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -19,7 +31,7 @@
     <header>
       <div class="wrapper">
         <div class="logo">
-          <img src="Images/LogoSF1.png" alt="..."">
+          <img src="Images/LogoSF1.png" alt="...">
         </div>
         <nav>
           <a href="#">Inicio</a>
