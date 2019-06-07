@@ -1,13 +1,8 @@
 <?php
-
 	session_start();
-
 	if (@!$_SESSION['idUsuario']) {
-
 		header("location:index.html");
-
 	}
-
 ?>
 
 <!DOCTYPE html>
@@ -37,19 +32,19 @@
           <a href="#">Inicio</a>
           <a href="#">Servicio</a>
           <a href="#">Cuenta</a>
-          <a href="#">Cerrar sesión</a>
+          <a href="PHP/Logout.php">Cerrar sesión</a>
         </nav>
       </div>
     </header>
     <div class="contenido">
-      <h1>Bienvenido a SafeSchool</h1>
+      <h1>Bienvenido a SafeSchool <?php echo $_SESSION['Nombre']; ?></h1>
       <section class="datos">
         <nav>
           <h2>Tus usuarios</h2>
         </nav>
         <nav>
           <h2>Agregar más usuarios</h2>
-          <form class="" action="index.html" method="post">
+          <form class="" action="" method="POST">
             <input type="text" name="" value="" placeholder="Código">
             <button type="button" name="button">Aceptar</button>
           </form>

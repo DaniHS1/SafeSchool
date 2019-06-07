@@ -10,41 +10,39 @@
     $subs_pass = utf8_decode($_POST['LContraseña']);
     $subs_email = utf8_decode($_POST['LCorreo']);
     $text= 'SELECT * FROM `usuarios` WHERE `Correo` = "'.$subs_email.'"';
-    mysqli_select_db($db_connection, $db_name);
-    $resultado= mysqli_query($db_connection, $text);
-
-    $row = mysqli_num_rows($resultado);
 
     mysqli_select_db($db_connection, $db_name);
     $sql2=mysqli_query($db_connection,'SELECT * FROM `usuario` WHERE `Correo` = "'.$subs_email.'"');
     if($f2=mysqli_fetch_assoc($sql2)){
-    	if($f2['tipo']=="1"){
-    	    if($subs_pass==$f2['Contraseña']){
+    	if($f2['Tipo']=="1"){
+    	    if($subs_pass==$f2['Contra']){
+            session_start();
     		      $_SESSION['idUsuario']=$f2['idUsuario'];
     	    		$_SESSION['Nombre']=$f2['Nombre'];
 
     		    	echo '<script>alert("BIENVENIDO USUARIO :D")</script> ';
-    		    	echo "<script>location.href='../Inicio.html'</script>";
+    		    	echo "<script>location.href='../Inicio.php'</script>";
     		    }
     		    else{
     		        echo '<script>alert("Contraseña incorrecta")</script> ';
-    		    	echo "<script>location.href='../Login.html'</script>";
+    		    	  echo "<script>location.href='../Login.php'</script>";
     		    }
     		}else{
     	     if($subs_pass==$f2['password']){
-    	    		$_SESSION['usuario']=$f2['usuario'];
+             session_start();
+              $_SESSION['idUsuario']=$f2['idUsuario'];
+    	    		$_SESSION['Nombre']=$f2['Nombre'];
 
     		    	echo '<script>alert("NO YET")</script> ';
     		    	//echo "<script>location.href='../acceso/index.php'</script>";
     		    }
     		    else{
     		        echo '<script>alert("Contraseña incorrecta")</script> ';
-    		    	echo "<script>location.href='login.html'</script>";
     		    }
     	  }
     	}
     	else{
-    	    print "<script>alert(\"Usuario no resgistrado.\");window.location='../Login.html';</script>";
+    	    print "<script>alert(\"Usuario no resgistrado.\");window.location='../Login.php';</script>";
     	}
 
       mysqli_close($db_connection);
@@ -57,18 +55,16 @@
       $subs_telefono = utf8_decode($_POST['RTelefono']);
       $subs_direccion = utf8_decode($_POST['RDireccion']);
 
-      $text= 'SELECT * FROM `usuarios` WHERE `email` = "'.$subs_email.'"';
+      $text= 'SELECT * FROM `usuarios` WHERE `email` = "'.$subs_correo.'"';
       mysqli_select_db($db_connection, $db_name);
       $resultado= mysqli_query($db_connection, $text);
 
-      $row = mysqli_num_rows($resultado);
+      $row = 0; //$row = mysqli_num_rows($resultado);
 
       if ($row>0){
         header('alert(\"Ya existe otro usuario con el mismo correo.\");');
       } else {
-        $insert_value = 'INSERT INTO `' . $db_name . '`.`'.$db_table_name.'`
-        (`nombre` , `apellidos` , `correo`, `Contraseña`, `telefono`, `direccion`)
-         VALUES ("' . $subs_nombre . '", "' . $subs_apellidos . '", "' . $subs_correo . '", "' . $subs_contraseña . '", "' . $subs_telefono . ', "' . $subs_direccion . '"")';
+        $insert_value = 'INSERT INTO `' . $db_name . '`.`'.$db_table_name.'` (`nombre` , `apellidos` , `correo`, `Contra`, `telefono`, `direccion`) VALUES ("' . $subs_nombre . '", "' . $subs_apellidos . '", "' . $subs_correo . '", "' . $subs_contraseña . '", "' . $subs_telefono . '", "' . $subs_direccion . '")';
         //mysqli_select_db($db_connection, $db_name);
         $retry_value = mysqli_query($db_connection, $insert_value);
         if (!$retry_value) {
@@ -85,6 +81,7 @@
           header('alert(\"Registro exitoso.\"); Location: ../Inicio.php');
         }
       mysqli_close($db_connection);
+}
 }
 
 ?>

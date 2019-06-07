@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if (!(@!$_SESSION['idUsuario'])) {
+		header("location:Inicio.php");
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -21,6 +28,8 @@
 
       </div>
     </div>
+
+    <a href="Registrarse.php">Registrarse</a>
 
 
   </body>
