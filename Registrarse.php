@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="log">
-      <form class=".login1" action="PHP/ConLogReg.php" method="POST">
+      <form class="register1" action="PHP/ConLogReg.php" method="POST">
         <h2>Registrarse</h2>
         <input type="text" name="RNombre" placeholder="Nombre" required>
         <input type="text" name="RApellidos" placeholder="Apellidos" required>

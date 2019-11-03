@@ -18,7 +18,7 @@
   </head>
   <body>
     <div class="log">
-      <form class=".login1" action="PHP/ConLogReg.php" method="POST">
+      <form class="login1" action="PHP/ConLogReg.php" method="POST">
         <h2>Ingresar</h2>
         <input type="email" name="LCorreo" placeholder="Correo" required>
         <input type="password" name="LContraseña" placeholder="Contraseña" required>
@@ -28,9 +28,8 @@
 
       </div>
     </div>
+    <a href="Registrarse.php" id="boton">Registrarse</a>
 
     <a href="Registrarse.php">Registrarse</a>
-
-
   </body>
 </html>
