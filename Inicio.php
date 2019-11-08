@@ -1,8 +1,8 @@
 <?php
-	session_start();
+	/*session_start();
 	if (@!$_SESSION['idUsuario']) {
 		header("location:index.html");
-	}
+	}*/
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
     <title>SafeSchool</title>
 
     <!--CSS-->
-    <link rel="stylesheet" href="Estilos/InicioStyle.css">
+    <link rel="stylesheet" href="Estilos/InicioStyle0.css">
     <link rel="stylesheet" href="Estilos/HeaderStyle.css">
   	<link rel="stylesheet" href="Estilos/FooterStyle.css">
 
@@ -37,10 +37,14 @@
       </div>
     </header>
     <div class="contenido">
-      <h1>Bienvenido a SafeSchool <?php echo $_SESSION['Nombre']; ?></h1>
+      <h1>Bienvenido a SafeSchool <?php /*echo $_SESSION['Nombre']; */?> Jaime</h1>
       <section class="datos">
         <nav>
           <h2>Tus usuarios</h2>
+					<div class="alumno">
+						Daniel Hachac:<br>
+						<p>Estado: Adentro.</p>
+					</div>
         </nav>
         <nav>
           <h2>Agregar más usuarios</h2>
@@ -54,7 +58,7 @@
         <h2>Solicitudes</h2>
       </nav>
       <br><br><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p id="inf">La tecnológica no solo es un factor fundamental en este prototipo, ya es un factor fundamental en la vida cotidiana, es por eso que Safe School es necesaria en las instituciones académicas, porque toma en cuenta todas las partes de la institución (alumnos, padres, y personal administrativo), vinculando cada uno de los involucrados con la información necesaria alrededor de se la seguridad y control de los los alumnos.</p>
       <br><br><br>
 
     <footer>
@@ -63,13 +67,7 @@
   			<div class="container-body">
   				<div class="colum1">
   					<h1>Más información de la compañia</h1>
-  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-  						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-  						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-  						aliquip ex ea commodo consequat. Duis aute irure dolor in
-  						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-  						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-  						culpa qui officia deserunt mollit anim id est laborum.</p>
+  					<p>Nuestro proyecto se enfoca en mejorar el control de acceso y salida de los alumnos en un centro educativo (escuela, academia, o centro de capacitación), teniendo en cuenta el desarrollo tecnológico, el cuidado del medio ambiente y sobre todo la seguridad que debe haber en un centro educativo.</p>
   				</div>
 
   				<div class="colum2">
