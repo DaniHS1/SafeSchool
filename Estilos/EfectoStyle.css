@@ -3,7 +3,7 @@
   width: 270px;
   height: 150px;
   margin: 30px;
-  background-image: url(../Fotos1/Perfil1.jpg);
+  background-image: url(..\Fotos1\Perfil1.jpg);
   background-size: contain;
   margin: auto;
   margin-top: 7%;
