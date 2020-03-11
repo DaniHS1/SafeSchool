@@ -6,8 +6,6 @@
 //------------------------------------------------------------------------------
   }else if(isset($_POST['btnLog'])){
 //------------------------------------------------------------------------------
-
-
     $subs_pass = utf8_decode($_POST['LContraseña']);
     $subs_email = utf8_decode($_POST['LCorreo']);
     $text= 'SELECT * FROM `UsuarioP` WHERE `Correo` = "'.$subs_email.'"';
