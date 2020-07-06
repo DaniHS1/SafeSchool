@@ -1,0 +1,36 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #FBFCFC;
+}
+
+.datos{
+  margin-left: 10%;
+  display: flex;
+}
+.datos nav{
+  color: white;
+  width: 40%;
+  background-color: #2DA9A7;
+  border-radius: 7px;
+  text-align: center;
+  padding: 15px;
+}
+
+.datos form input, .datos form button{
+  display: block;
+}
+
+.alumno{
+  margin-top: 20px;
+  color: black;
+  background-color: white;
+  border-radius: 7px;
+  padding: 5px;
+  width: 80%;
+}

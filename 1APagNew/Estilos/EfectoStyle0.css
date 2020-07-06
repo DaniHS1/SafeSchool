@@ -1,0 +1,76 @@
+
+.imagen{
+  width: 270px;
+  height: 150px;
+  margin: 30px;
+  background-image: url(../Fotos1/Perfil10.jpg);
+  background-size: contain;
+  margin: auto;
+  margin-top: 7%;
+}
+.imagen1{
+  width: 270px;
+  height: 150px;
+  margin: 30px;
+  background-image: url(../Fotos1/monsea.jpg);
+  background-size: contain;
+  margin: auto;
+  margin-top: 7%;
+}
+
+.info{
+  position: absolute;
+  overflow: hidden; /*Lo que esté afuera no lo muestra*/
+  width: 270px;
+  height: 150px;
+  background-color: rgba(31, 31, 31, 0.9);
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  opacity: 0;
+  /*Mi cambio*/
+  color: white;
+  font-size: 11px;
+}
+
+.imagen:hover .info{
+  opacity: 1;
+}
+
+.imagen:hover .headline{
+  margin-left: 70px;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+}
+
+.imagen1:hover .info{
+  opacity: 1;
+}
+
+.imagen1:hover .headline{
+  margin-left: 70px;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+}
+
+.headline{
+  position: absolute;
+  margin-top: 20px;
+  margin-left: -70px;
+  font-size: 21px;
+}
+
+.info2{
+  margin: auto;
+  width: 250px;
+  text-align: center;
+  -webkit-transition: margin 0.3s;
+  -moz-transition: margin 0.2s;
+  margin-top: 160px;
+}
+
+.imagen:hover .info2{
+  margin-top: 55px; //70
+}
+.imagen1:hover .info2{
+  margin-top: 55px; //70
+}
